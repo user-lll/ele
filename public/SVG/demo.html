@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+	</head>
+	<body>
+		1、将 SVG 元素直接嵌入 HTML 页面中
+		<svg xmlns="http://www.w3.org/2000/svg" version="1.1">
+		   <circle cx="100" cy="50" r="40" stroke="black" stroke-width="1" fill="red" />
+		</svg> 
+		    <defs>
+		      <rect id="a" y="54" width="60" height="25" rx="1"/>
+		      <mask id="b" x="0" y="0" width="60" height="25" fill="#fff">
+		        <use xlink:href="#a"/>
+		    </mask>
+		    </defs>
+		    <g transform="translate(-9 -56)" fill="none" fill-rule="evenodd">
+		      <use stroke="#EDEEEF" mask="url(#b)" stroke-width="2" xlink:href="#a"/>
+		      <path d="M19.05 62.797c-.208-.268-1.776-2.188-3.629-1.725-.662.165-1.439.44-2.009 1.463-2.18 3.913 4.965 8.983 5.615 9.433V72l.023-.016.023.016v-.032c.65-.45 7.795-5.52 5.615-9.433-.57-1.023-1.347-1.298-2.009-1.463-1.853-.463-3.42 1.457-3.629 1.725z" fill="red"/>
+		    </g>
+		  </svg>
+		  
+		  
+		 2、使用<img>、<object>、<embed>、<iframe>等标签插入网页
+		  <img src="add_circle.svg" alt="">
+		  <object data="add_circle.svg" type=""></object>
+		  <embed src="add_circle.svg" type="">
+		  <iframe src="add_circle.svg" width="" height=""></iframe>
+	</body>
+</html>
